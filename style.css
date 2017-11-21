@@ -1,0 +1,198 @@
+ 
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Flavors";
+}
+
+body {
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  font-size: 18px;
+}
+
+h1, h2 { font-family: 'Flavors', cursive; }
+  
+h1 {
+  font-size: 40px;
+  font-size: 2.5em;
+  font-weight:  lighter;
+}
+h2 {
+  font-size: 2.5em;
+  font-variant: common-ligatures small-caps;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+h3, h4, h5, p { font-family: 'Open Sans', sans-serif; }
+h6 {
+    font-family: 'Bilbo', cursive;
+    font-size: 1.875em;
+    font-stretch: expanded;
+    text-align: center;
+    padding: 4px;
+}
+h1, h2, h3, h4, h5, h6, p { color: #eee; margin: 0;}
+
+.blu { background-color: #00548a; }
+.yel { background-color: #bc8835; }
+.rad { background-color: #7a3839; }
+.bluLt { background-color: #31aae8; }
+.yelLt { background-color: #edb232; }
+.redLt { background-color: #cf5f5f; }
+.bluDk { background-color: #2b95bf; }
+.yelDk { background-color: #d1a13f; }
+.redDk { background-color: #aa5050; }
+
+}
+
+
+
+.pgon { display: block; }
+.pgoff { display: none; }
+
+.clear { clear: both; }
+
+.clearfix:before,
+.clearfix:after { content: " "; display: block; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+.outer-div { 
+   position: relative; 
+   float: right; 
+   right: 50%; 
+}
+.inner-div { 
+	position: relative;
+	float: right;
+	right: -50%;
+	transform: translateX(50%);
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+}
+.tagline {
+  text-align: center;
+  width: 100%;
+}
+
+.ltitle {
+   display: block;
+   float: left;
+   text-align: left; 
+   margin: 0 0 0 10%;
+}
+.lcredits {
+   display: block;
+   float: right;
+   font-size: .85em; 
+   text-align: right; 
+   margin: 0 10% 0 0;
+}
+
+.indicDots { 
+   display: inline-block;
+   float: left; 
+   height: .5em; width: .5em; 
+   padding: .5em; 
+   border: 1.5px solid #999; 
+   border-radius: 50%;
+   margin: 0 .25em; 
+   opacity: .85; 
+}
+.indicDots:hover { 
+  background-color: #003268;
+  opacity: .5; 
+}
+.hilite { 
+  background-color: #31aae8;
+  opacity: .75;
+}
+
+
+
+
+
+/*
+.arrowCont {
+  display: inline-block;
+  position: absolute;
+  background-image: url(../images/sprites.png);
+  width: 30px; height: 80px; 
+}
+.arrowLftBlu {
+  display: inline-block;
+  background-position: 90px 0;
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  opacity: 1;
+}
+.arrowRtBlu {
+  display: inline-block;
+  background-position: 0 0;
+  position: absolute; 
+  top: 50%;
+  right: -40px;
+  opacity: 1;
+}
+.arrowRtBlu:hover, .arrowLftBlu:hover { opacity: .5; } */
+
+/*
+@media only screen 
+and (min-device-height : 100px) 
+and (max-device-height: 450px) 
+and (orientation : landscape) { 
+
+*/
+
+
+.scomicHead {
+  float: left;
+  height: auto;
+  width: 29%;
+  padding-top: 1em;
+  margin: 5% 0 -8px 3%;
+}
+.stitle {
+  text-align: center;
+  float: right;
+  width: 68%;
+  margin-top: 10%;
+}
+.scredits {
+  text-align: center;
+  float: right;
+  width: 68%;
+  padding: 8% 0 10% 0;
+}
+
+.scomicSpace {
+  max-height: 450px;
+  max-width: 603px;
+  margin: 0 auto;
+}
+.scomicImg {
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+.sframespace {
+  width: 100%;
+  height: 83%;
+}
+.stagline {
+  text-align: center;
+  width: 100%;
+  height: 17%;
+  padding-top: .5em;
+}
