@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Simple Ize &#38; Dan Large Scale</title>
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Flavors|Open+Sans|Bilbo">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <header>
+      <img class="pgHead" src="images/homeHeader-75x.png" />
+      <h6 class="yel">Celebrating the humorous, heartwarming side of neurodiversity</h6></header>
+      
+<section class="blu"> 
+   <div class="titleinfo">
+               <h2 class="cmctitle ltitle">Up Early: Noises</h2>
+      	       <h2 class="cmctitle ltitle">Up Early: No School</h2>
+               <h2 class="cmctitle ltitle">Up Early: Long Day</h2>
+
+     	       <p class="cmccredits lcredits">Story, Layout, Color: Bobbie Hall<br>Ink Art: Mudjib Pradana<br>November 5, 2017</p>
+      	       <p class="cmccredits lcredits">Story, Layout, Color: Bobbie Hall<br>Ink Art: Mudjib Pradana<br>November 6, 2017</p>
+      	       <p class="cmccredits lcredits">Story, Layout, Color: Bobbie Hall<br>Ink Art: Mudjib Pradana<br>November 7, 2017</p> 
+         
+  
+   </div>
+      	      	
+   <div class="main">
+      <div class="clearfix">
+         <div class="outer-div">
+            <div class="inner-div">
+               <div class="cmcseries">
+               <img id="comic1" 		
+               src="https://s20.postimg.org/3nph35lot/121016up_Early1800x597.png" width="800px" height="597px" alt="Ize &#38; Dan Comic: Up Early: Noises" 
+      		onclick="plusDivs(+1)" 		
+      		ontouchstart="touchStart(event,'comic1);"  
+      		ontouchend="touchEnd(event);" 	
+     		ontouchmove="touchMove(event);" 
+     		ontouchcancel="touchCancel(event);"/></div>
+	       <div class="cmcseries">
+               <img id="comic2" 	
+               src="https://s20.postimg.org/c05483dgt/121017up_Early800x597_2.png" width="800px" height="597px" alt="Ize &#38; Dan Comic: Up Early: No School" 
+      		onclick="plusDivs(+1)" 
+      		ontouchstart="touchStart(event,'comic2');"  		
+      		ontouchend="touchEnd(event);" 
+		ontouchmove="touchMove(event);" 	
+		ontouchcancel="touchCancel(event);" /></div>
+	       <div class="cmcseries">
+               <img id="comic3" 	
+              src="https://s20.postimg.org/v6ibbbjot/121018up_Early800x597_3.png" width="800px" height="597px" alt="Ize &#38; Dan Comic: Up Early: Long Day" 
+      		onclick="plusDivs(+1)" 
+      		ontouchstart="touchStart(event,'comic3');"  		
+      		ontouchend="touchEnd(event);" 
+		ontouchmove="touchMove(event);" 	
+		ontouchcancel="touchCancel(event);" /></div>
+	    </div>	
+         </div>		
+      </div>		
+   </div>
+   
+   <div class="clearfix">                          
+      <div class="outer-div">
+         <div class="inner-div">
+         <div id="indicatorDots"></div></div></div></div>
+  <!--   <div class="leftArrow">
+	<div id="prevArrow" class="arrowCont arrowLftBlu"></div></div>
+	<div class="rightArrow"></div>
+        <div id="nextArrow" class="arrowCont arrowRtBlu arrowRtPlace"></div>
+        
+        
+
+        <div class="">
+          </div>
+     </div> -->
+
+              
+	 </div>
+      </div>
+   </div>   
+
+<script>
+   var comicIndex = 1;
+   
+   showDots(comicIndex);
+   
+   function showDots(n) {
+      var j;
+      var idots = document.getElementsByClassName("cmcseries");
+      var inddot = document.getElementById('indicatorDots');
+         for (j = 0; j < idots.length; j++) {
+            inddot.innerHTML += "<span id='" + 'dot' + j + "' class='indicDots thisComic'></span>";
+         }
+      }
+</script>  
+      
+      
+ 
+<script>
+   var comicIndex = 1;
+   showDivs(comicIndex);
+      
+   function plusDivs(n) {
+     showDivs(comicIndex += n);
+   }
+   function currentDiv(n) {
+      showDivs(comicIndex = n);
+   }
+   function showDivs(n) {
+      var i;
+      var titl = document.getElementsByClassName("cmctitle");
+      var cred = document.getElementsByClassName("cmccredits");
+      var sers = document.getElementsByClassName("cmcseries");
+      var indc = document.getElementsByClassName("thisComic"); 
+      if (n > sers.length) {comicIndex = 1}
+      if (n < 1) {comicIndex = sers.length}
+      for (i = 0; i < sers.length; i++) {
+         sers[i].style.display = 'none';
+      	 titl[i].style.display = 'none';
+      	 cred[i].style.display = 'none';
+     	 indc[i].className = indc[i].className.replace(' hilite', ""); 
+      }
+      sers[comicIndex-1].style.display ='block';
+      titl[comicIndex-1].style.display ='block';
+      cred[comicIndex-1].style.display ='block';
+      indc[comicIndex-1].className +=' hilite';  
+   }
+</script> 
+<script src="js/touchSwipe.js"></script>
+</body>
+</html>
