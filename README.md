@@ -1,5 +1,6 @@
 # website-features
-##Ize & Dan Comics
+## Ize & Dan 
+
 Adding the little details that make a website run smoothly
 
 1. a comic (image) slider to scroll through a series of 2-6 comics
