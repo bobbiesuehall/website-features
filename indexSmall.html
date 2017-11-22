@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Simple Ize &#38; Dan Small Scale</title>
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Flavors|Open+Sans|Bilbo">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body> 
+   <div id="titlepg" class="sframespace blu pgon">
+      <div 	onclick="hidetitlepg()";
+      		ontouchstart="touchStart(event,'titlepg');"  
+      		ontouchend="touchEnd(event);" 
+      		ontouchmove="touchMove(event);" 
+      		ontouchcancel="touchCancel(event);">
+         <img src="images/InDLogoSmallScale.png" class="scomicHead" />
+         <h2 class="stitle">Up Early</h2>
+         <p class="scredits">Story, Layout, Color: Bobbie Hall<br>Ink Art: Mudjib Pradana<br>November 19, 2017</p></div>
+         <div class="clear"></div>
+         <h6 class="stagline yel">Celebrating the humorous, heartwarming side of neurodiversity</h6></div></div>
+         
+   <div class="cmcseries pgoff blu">
+      <img id="comic1" class="scomicImg scomicSpace" 		
+           src="https://s20.postimg.org/3nph35lot/121016up_Early1800x597.png" width="800px" height="597px" alt="Ize &#38; Dan Comic: Up Early: Noises" 
+      		onclick="plusDivs(+1)" 		
+      		ontouchstart="touchStart(event,'comic1);"  
+      		ontouchend="touchEnd(event);" 	
+     		ontouchmove="touchMove(event);" 
+     		ontouchcancel="touchCancel(event);"/></div>
+   <div class="cmcseries pgoff blu">
+      <img id="comic2" class="scomicImg scomicSpace" 	
+          src="https://s20.postimg.org/c05483dgt/121017up_Early800x597_2.png" width="800px" height="597px" alt="Ize &#38; Dan Comic: Up Early: No School" 
+      		onclick="plusDivs(+1)" 
+      		ontouchstart="touchStart(event,'comic2');"  		
+      		ontouchend="touchEnd(event);" 
+		ontouchmove="touchMove(event);" 	
+		ontouchcancel="touchCancel(event);" /></div>
+   <div class="cmcseries pgoff blu">
+      <img id="comic3" class="scomicImg scomicSpace" 	
+          src="https://s20.postimg.org/v6ibbbjot/121018up_Early800x597_3.png" width="800px" height="597px" alt="Ize &#38; Dan Comic: Up Early: Long Day" 
+      		onclick="plusDivs(+1)" 
+      		ontouchstart="touchStart(event,'comic3');"  		
+      		ontouchend="touchEnd(event);" 
+		ontouchmove="touchMove(event);" 	
+		ontouchcancel="touchCancel(event);" /></div></div>      
+   
+      
+   <div class="clearfix">                          
+      <div class="outer-div">
+         <div id="indicatorDots" class="inner-div"></div></div></div>
+  
+  
+  <script> 
+   function hidetitlepg() {
+    var x = document.getElementById("titlepg");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "none";
+    }
+    showDivs(1);
+}
+   </script>
+   
+   <script>
+    var comicIndex = 1;
+    showDots(comicIndex);
+   
+    function showDots(n) {
+        var j;
+     	var idots = document.getElementsByClassName("cmcseries");
+     	var inddot = document.getElementById('indicatorDots');
+        for (j = 0; j < idots.length; j++) {
+           inddot.innerHTML += "<span id='" + 'dot' + j + "' class='indicDots thisComic'></span>";
+        }
+      }
+   </script>
+   
+   <script>
+  
+      var comicIndex = 1;
+      
+      function plusDivs(n) {
+        showDivs(comicIndex += n);
+      }
+      function currentDiv(n) {
+        showDivs(comicIndex = n);
+      }
+      function showDivs(n) {
+  	var i;
+  	var sers = document.getElementsByClassName("cmcseries");
+	var indc = document.getElementsByClassName("thisComic");
+  	if (n > sers.length) {comicIndex = 1}
+  	if (n < 1) {comicIndex = sers.length}
+  	for (i = 0; i < sers.length; i++) {
+      	   sers[i].style.display = 'none';
+      	   indc[i].className = indc[i].className.replace(' hilite', "");
+      	 }
+  	sers[comicIndex-1].style.display ='block';
+  	indc[comicIndex-1].className +=' hilite'; 
+      }
+   </script> 
+  
+   <script src="js/touchSwipe.js"></script>
+</body>
+</html>
